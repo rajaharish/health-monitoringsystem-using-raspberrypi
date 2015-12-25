@@ -1,0 +1,102 @@
+<html>
+<head>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<h1 class="navbar-brand"><b><big>Health Monitoring System</b></big></h1>
+<div>
+<!--<ul class=nav navbar-nav">-->
+<!--<li class="btn btn-warning"><a href="#">View Archive</a></li>-->
+</ul>
+</div>
+</div>
+
+<div class="container" align="center">
+	<div class="row">
+		</br>
+		<!--<form action="http://127.0.0.1:8000/home/" method="GET">-->
+		<a href="/archive/" class="btn btn-warning" align="center">View Archive</a>
+		<a href="/home/" class="btn btn-warning" align="center">Last Update</a>
+		<a href="/logout/" class="btn btn-warning" align="center">Logout</a>
+		<!--</form>-->
+	</div>
+</div>
+</nav>
+</br>
+</br>
+<div class="container">
+<div class="row">
+
+<div aligh="center">
+
+
+{% if messages %}
+<div class="alert alert-success">
+<ul class="messages">
+	<!--{%for message in messages %}-->
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	 <strong>{{ message}}</strong>
+	<!--{% endfor %}-->
+</ul>
+</div>
+{% endif %}
+
+        <h3>Create New Patient</h3>
+</br>
+</br>
+
+<form action="/formsubmit/" method="get" role="form">
+<!--<input type="text" name="pname">-->
+<div class="col-lg-4">
+<div class="form-group">
+	<label for="InputName">Enter Patient Name </label>
+	<div class="input-group">
+
+	<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter name">
+</div>
+</div>
+
+<div class="form-group">
+	<label for="InputFreq">Enter Monitoring Frequency(sec)</label>
+	<div class="input-group">
+
+	<input type="text" class="form-control" name="InputFreq" id="InputFreq" placeholder="Enter Frequency">
+</div>
+</div>
+
+
+<div class="form-group">
+	<label for="Inputthreshold">Enter Temperature Threshold (C)</label>
+	<div class="input-group">
+
+	<input type="text" class="form-control" name="Inputthreshold" id="Inputthreshold" placeholder="Enter threshold">
+</div>
+</div>
+
+
+<div>
+<input type="submit" name="submit" id="submit" value=Submit class="btn btn-info pull-left">
+
+<!--<input type="submit" value="Details"/>-->
+</div>
+</div>
+</form>
+
+
+
+</div>
+</div>
+</body>
+</head>
+</html>

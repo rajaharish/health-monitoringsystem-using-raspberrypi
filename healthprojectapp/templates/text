@@ -1,0 +1,20 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container" align="center">
+	<div class="navbar-header">
+	<a class="navbar-brand"> Health Monitoring System</a>
+	</div>
+	</br>
+</div>
+</nav>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div class="container" align="center">
+	<div class="row">
+		</br>
+		<a href="" class="btn btn-warning" align="center">View Archive</a>
+		
+	</div>
+</div>

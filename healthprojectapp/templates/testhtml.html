@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="5; URL=http://127.0.0.1:8000/home">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<script>
+setTimeout(function(){
+	window.location.reload(10);
+},5000);
+
+
+</script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<h1 class="navbar-brand"><b><big>Health Monitoring System</b></big></h1>
+<div>
+<!--<ul class=nav navbar-nav">-->
+<!--<li class="btn btn-warning"><a href="#">View Archive</a></li>-->
+</ul>
+</div>
+</div>
+
+<div class="container" align="center">
+	<div class="row">
+		</br>
+		<!--<form action="http://127.0.0.1:8000/archive/" method="GET">-->
+		<a href="/archive/" class="btn btn-warning" align="center">View Archive</a>
+		<a href="/pdetails/" class="btn btn-warning" align="center">Settings</a>
+		<a href="/logout/" class="btn btn-warning" align="center">Logout</a>
+		<!--<a href="/start_monitor/" class="btn btn-warning" align="center">start monitoring</a>-->
+		<!--</form>-->
+	</div>
+</div>
+</nav>
+</br>
+</br>
+<div class="container">
+<div aligh="center">
+
+
+<h4 align="center">Latest Information </h4>
+<table class="table table-bordered table-hover" style="width: 50%;" align="center">
+<tbody>
+<tr class="success">
+<td style="width: 50%;"><b> Date</b></td>
+<td> {{timestamp}}</td>
+</tr>
+<tr class="success">
+<td style="width: 50%;"><b> Patient Name</b></td>
+<td>{{name}}</td>
+</tr>
+<tr class="success">
+<td style="width: 50%;"><b> Temperature(C)</b></td>
+<td>{{temperature}}</td>
+</tr>
+<tr class="success">
+<td style="width: 50%;"><b> Pulse(BPM) </b></td>
+<td> {{pulse}}</td>
+</tr>
+
+</table>
+
+
+</div>
+</div>
+</body>
+</head>
+</html>

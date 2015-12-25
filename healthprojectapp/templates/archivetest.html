@@ -1,0 +1,75 @@
+<html>
+<head>
+
+
+<!--<meta http-equiv="refresh" content="5; URL=http://127.0.0.1:8000/home">-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<h1 class="navbar-brand"><b><big>Health Monitoring System</b></big></h1>
+<div>
+<!--<ul class=nav navbar-nav">-->
+<!--<li class="btn btn-warning"><a href="#">View Archive</a></li>-->
+</ul>
+</div>
+</div>
+
+<div class="container" align="center">
+	<div class="row">
+		</br>
+		<a href="/home/" class="btn btn-warning" align="center">Last Update</a>
+		<a href="/pdetails/" class="btn btn-warning" align="center">Settings</a>
+		<a href="/logout/" class="btn btn-warning" align="center">Logout</a>	
+	</div>
+</div>
+</nav>
+
+<div class="col-lg-8 col-md-9 col-sm-9 col-xs-10">
+<div id="Searchbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                     
+          <form class="form-inline" action="/archive/" method="get">  
+         
+    <div class="form-group">
+<!--         <label for="inputEpid">Enter Patient ID:</label> -->
+        <input type="text" class="form-control" id="inputEpid" placeholder="PatientName" name="Patient_Name"/>
+        <button type="submit" class="btn btn-info">Get Details</button>
+    </div>
+ 
+   
+
+  </form>
+</div>
+</div>
+
+<!--<form action="http://127.0.0.1:8000/home/" method="GET">
+<input type="submit" class="btn" value="Home" name="home"/>
+</form>-->
+<table class="table table-bordered table-hover style="width: 50%;" align="center">
+<thead>
+<tr>
+<th>Date</th>
+<th>Patient Name</th>
+<th>Body Temperature(C)</th>
+<th>Pulse Rate(BPM) </th>
+</thead>
+<tbody>
+{% for x,y in data.items %}
+<tr>
+{% for k,v in y.items %}
+<td>{{v}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</head>
+</html>

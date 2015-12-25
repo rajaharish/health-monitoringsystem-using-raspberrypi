@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<style>
+table,th,td{
+border: 1px solid black;
+border-collapse: collapse;
+}
+th,td{
+padding: 15px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<center><h1>Health Monitoring</h1>
+<form action="/home/" method="GET">
+<input type="submit" class="btn" value="Home" name="home"/>
+</form>
+<table>
+{% for x,y in data.items %}
+<tr>
+{% for k,v in y.items %}
+<td>{{v}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</center>
+</body>
+</head>
+</html>
